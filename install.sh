@@ -33,7 +33,7 @@ done
 # --- 3. Clone / pull source ---------------------------------------
 log "Fetching source..."
 if [[ -d $INSTALL_DIR/.git ]]; then
-  git -C "$INSTALL_DIR" pull --quiet
+  git -C "$INSTALL_DIR" pull origin master --quiet
 else
   git clone --depth 1 "$REPO_URL" "$INSTALL_DIR"
 fi
